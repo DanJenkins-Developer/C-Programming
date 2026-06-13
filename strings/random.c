@@ -27,6 +27,13 @@ int main ()
     char d[] = "0xA";
     char e[] = "07";
 
+    char f[] = "";
+    f[0] = 't';
+    int len = strlen(f);
+    printf("%d\n", len);
+
+    
+
     printf("%d\n", stoi(d, strlen(c)));
 
     return 0;
@@ -37,6 +44,8 @@ int stoi(char * str, int len)
 
     int j;
     int base;
+
+    char substr[] = "";
 
     if(str[0] == '0')
     {
