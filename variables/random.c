@@ -4,20 +4,20 @@
 int main ()
 {
 
-    printf("\t\tHex\t\tOctal\t\tint\t\tuint\n");
-
-    int a = 1;
-    printf("INT_MAX  ::\t%X, \t%o, \t%d, \t\t%u\n", INT_MAX, INT_MAX, INT_MAX);
-    printf("UINT_MAX ::\t%x, \t%o, \t%d, \t\t%u\n", UINT_MAX, UINT_MAX, UINT_MAX);
+    printf("%-15s %-15s %-15s %-15s %-15s\n", "", "", "Integers", "", "");
+    printf("\n");
+    printf("%-15s %-15s %-15s %-15s %-15s\n", "", "Hex", "Octal", "Int", "Uint");
+    printf("%-15s %-15x %-15o %-15d %-15u\n", "INT_MAX ::" , INT_MAX, INT_MAX, INT_MAX);
+    printf("%-15s %-15x %-15o %-15d %-15u\n", "UINT_MAX ::", UINT_MAX, UINT_MAX, UINT_MAX);
 
     printf("\n");
 
-    unsigned unsignedinteger = 0xffffffff;
-    // unsigned unsignedinteger = -0xffffffff;
-    // unsigned unsignedinteger = -1;
-    printf("test ::\t\t%x, \t%o, \t%d,\t\t%u", unsignedinteger, unsignedinteger);
+    // unsigned unsignedinteger = 0xffffffff;
+    // // unsigned unsignedinteger = -0xffffffff;
+    // // unsigned unsignedinteger = -1;
+    // printf("test ::\t\t%x, \t%o, \t%d,\t\t%u", unsignedinteger, unsignedinteger);
 
-    int signedinteger = 99;
+    // int signedinteger = 99;
 
 
 
