@@ -1,10 +1,10 @@
 CC = gcc
 CFLAGS = -g -Wall
 
-random: ./variables/random.c
+random: ./loops/random.c
 	
 	mkdir -p bin
-	$(CC) $(CFLAGS) -o ./bin/random ./variables/random.c
+	$(CC) $(CFLAGS) -o ./bin/random ./loops/random.c
 
 clean:
 # 	rm -f ./bin/random
