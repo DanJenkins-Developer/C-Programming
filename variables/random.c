@@ -10,7 +10,7 @@ void dynamicWidthPrint(void);
 int main ()
 {
 
-    // dynamicWidthPrint();
+    dynamicWidthPrint();
     // printf("\n");
 
     // psInt();
@@ -37,8 +37,8 @@ void psInt()
     printf("%-15s %-15s %-15s %-15s %-15s\n", "", "", "Integers", "", "");
     printf("\n");
     printf("%-15s %-15s %-15s %-15s %-15s\n", "", "Hex", "Octal", "Int", "Uint");
-    printf("%-15s %-15x %-15o %-15d %-15u\n", "INT_MAX ::" , INT_MAX, INT_MAX, INT_MAX);
-    printf("%-15s %-15x %-15o %-15d %-15u\n", "UINT_MAX ::", UINT_MAX, UINT_MAX, UINT_MAX);
+    printf("%-15s %-15x %-15o %-15d %-15s\n", "INT_MAX ::" , INT_MAX, INT_MAX, INT_MAX, "");
+    printf("%-15s %-15x %-15o %-15d %-15u\n", "UINT_MAX ::", UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX);
 
 }
 
@@ -47,16 +47,16 @@ void psChar()
     printf("%-15s %-15s %-15s %-15s %-15s\n", "", "", "Char", "", "");
     printf("\n");
     printf("%-15s %-15s %-15s %-15s %-15s\n", "", "Hex", "Octal", "Int", "Uint");
-    printf("%-15s %-15x %-15o %-15d %-15u\n", "UCHAR_MAX ::" , UCHAR_MAX, UCHAR_MAX, UCHAR_MAX);
+    printf("%-15s %-15x %-15o %-15d %-15s\n", "UCHAR_MAX ::" , UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, "");
     printf("\n");
-    printf("%-15s %-15x %-15o %-15d %-15u\n", "SCHAR_MIN ::", SCHAR_MIN, SCHAR_MIN, SCHAR_MIN);
-    printf("%-15s %-15x %-15o %-15d %-15u\n", "SCHAR_MAX ::", SCHAR_MAX, SCHAR_MAX, SCHAR_MAX);
+    printf("%-15s %-15x %-15o %-15d %-15s\n", "SCHAR_MIN ::", SCHAR_MIN, SCHAR_MIN, SCHAR_MIN,  "");
+    printf("%-15s %-15x %-15o %-15d %-15s\n", "SCHAR_MAX ::", SCHAR_MAX, SCHAR_MAX, SCHAR_MAX, "");
 }
 
 void dynamicWidthPrint()
 {
     int cwidth = 20;
 
-    printf("%015s %015s %-15s %-15s %-15s\n", "Helloooooooooooo", "", "Integers", "", "");
-    printf("%0*s %0*s %-*s %-*s %-*s\n", cwidth, "Hellooooooooo", cwidth, "", cwidth, "Integers", cwidth, "", cwidth, "");
+    printf("%15s %15s %-15s %-15s %-15s\n", "Helloooooooooooo", "", "Integers", "", "");
+    printf("%*s %*s %-*s %-*s %-*s\n", cwidth, "Hellooooooooo", cwidth, "", cwidth, "Integers", cwidth, "", cwidth, "");
 }
