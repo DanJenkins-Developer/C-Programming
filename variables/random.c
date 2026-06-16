@@ -1,4 +1,5 @@
 #include <limits.h>
+#include <float.h>
 #include <stdio.h>
 
 void psInt(void);
@@ -10,14 +11,18 @@ void dynamicWidthPrint(void);
 int main ()
 {
 
-    dynamicWidthPrint();
+
+    printf("__FLT_MAX__ :: %f\n", __FLT_MAX__);
+    printf("__FLT_DIG__ :: %d\n", __FLT_DIG__);
+
+    // dynamicWidthPrint();
     // printf("\n");
 
     // psInt();
     // printf("\n");
     
-    psChar();
-    printf("\n");
+    // psChar();
+    // printf("\n");
     
 
     // unsigned unsignedinteger = 0xffffffff;
