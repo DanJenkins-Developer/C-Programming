@@ -28,9 +28,11 @@ int get_line(char s[], int lim)
 {
     int c, i;
 
+
+    // break_out fails because i is 1 not 0 when ctrl-d is sent?
     // int break_out = 0;
 
-    for (i=0; i<lim-1; ++i)
+    for (i=0; i<lim-1; i++)
     {
         c=getchar();
         
