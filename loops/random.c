@@ -19,29 +19,44 @@ int main()
             copy(longest, line);
         }
     if (max > 0)  /* there was a line */
-        printf("%s\n", longest);
+        printf("%s", longest);
     return 0;
 }
 
 /* get_line: specialized version to read a line into s, return length */
 int get_line(char s[], int lim)
 {
-    int c, i;
+    int c, i, break_out;
 
 
-    // break_out fails because i is 1 not 0 when ctrl-d is sent?
-    // int break_out = 0;
+    break_out = 0;
+    i = 0;
 
-    for (i=0; (c=getchar()) !=EOF; i++)
+    while (!break_out)
     {
-       
-        if (i < lim-1 && c!='\n')
+        if (i < lim-1 && (c=getchar()) != EOF && c!='\n')
+        {
             s[i] = c;
+            i++;
+        }
+        else
+        {
+            break_out = 1;
+        }
+
     }
+    
+     // break_out fails because i is 1 not 0 when ctrl-d is sent?
+    // for (i=0; (c=getchar()) !=EOF; ++i)
+    // {
+    //     if (i < lim-1 && c!='\n')
+    //         s[i] = c;
+    // }
     if (c == '\n') {
         s[i] = c;
         ++i;
     }
+
     s[i] = '\0';
     return i;
 }
