@@ -19,7 +19,7 @@ int main()
             copy(longest, line);
         }
     if (max > 0)  /* there was a line */
-        printf("%s", longest);
+        printf("%s\n", longest);
     return 0;
 }
 
@@ -32,15 +32,11 @@ int get_line(char s[], int lim)
     // break_out fails because i is 1 not 0 when ctrl-d is sent?
     // int break_out = 0;
 
-    for (i=0; i<lim-1; i++)
+    for (i=0; (c=getchar()) !=EOF; i++)
     {
-        c=getchar();
-        
-        if (c !=EOF && c!='\n' && i<lim-1)
+       
+        if (i < lim-1 && c!='\n')
             s[i] = c;
-        else
-            break;
-            // break_out = 1;
     }
     if (c == '\n') {
         s[i] = c;
